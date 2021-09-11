@@ -1,0 +1,15 @@
+# First pass (with DD)
+# Must be executed as root
+
+Sudo dd if=/dev/zero of=/dev/sdx bs=10m
+
+# Second pass (with DD)
+Sudo dd if=/dev/urandom of=/dev/sdx bs=10m
+
+# Third pass (with Shred)
+
+sudo shred -vfz /dev/sdx
+
+# That's it.
+
+# Keep in mind this will take a LONG time.
